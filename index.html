@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon ICON -->
+    <link rel="icon" href="./images/favicon.png" type="image/gif" />
+
+    <!-- Added Font Families -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Bootstrap CSS  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- title of the page -->
+    <title>SuperHero Hunter</title>
+  </head>
+  <body>
+    <!-- Navigation Menu bar With Title -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark posn-sticky">
+      <div class="container-fluid">
+        <a class="navbar-brand mainHead" href="index.html">
+          <img
+            src="./images/favicon.png"
+            alt=""
+            class="d-inline-block align-text-top logo"
+          />
+          Super Hero Hunter
+        </a>
+
+        <!-- ALter  Button  -->
+        <div class="d-flex">
+          <!-- favourite Button -->
+          <button id="favourite" class="btn btn-sm favBtn" type="submit">
+            favorites
+          </button>
+          <!-- Search Button -->
+          <button id="srch" class="btn btn-sm favBtn" type="submit">
+            Search
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!--  Search Section -->
+    <section class="search-section">
+      <div class="container-fluid align-self-center search-container">
+        <form action="" method="get" id="search-form" class="d-flex">
+          <input
+            class="form-control me-2 inp"
+            type="search"
+            id="search-string"
+            placeholder="Search Your Superhero..."
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- Searched Result display section -->
+    <section class="result-section">
+      <h2 id="querySection"></h2>
+      <div class="container-fluid mx-auto align-self-center">
+        <div class="mx-auto justify-content-evenly row" id="superhero-list">
+          <template id="canvas">
+            <div
+              class="col-3 shadow-lg p-4 mb-4 m-1 bg-body rounded"
+              id="superhero"
+            >
+              <!-- Basic Information of each Superhero -->
+              <div id="info">
+                <div id="thumb" class="cardThumb"><img src="" alt="" /></div>
+                <div id="name">Name -</div>
+                <div id="id">ID</div>
+                <div id="comic">Comics</div>
+                <div id="series">series</div>
+                <div id="stories">stories</div>
+              </div>
+              <div id="buttons" class="d-flex justify-content-between mt-3">
+                <!-- Add to Favourite button -->
+                <button
+                  class="btn btn-outline-primary btn-sm"
+                  id="fav"
+                  onclick="addFunction()"
+                >
+                  Add to Favourite
+                </button>
+
+                <!-- Learn More button -->
+                <button class="btn btn-primary btn-sm" id="learn-more">
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- notificaton section -->
+    <div id="snackbar">Succesfully! Added to Favourite</div>
+
+    <!-- favourite List Section -->
+    <section class="fav-section disp-none">
+      
+      <!-- heding -->
+      <div class="text-center p-5 mainHead" id="title">
+        <h1>My Favourite Heroes!</h1>
+      </div>
+
+      <!-- result Printing section -->
+      <ul id="list"></ul>
+    </section>
+
+    <!-- script for index js -->
+    <script src="./js/index.js"></script>
+    <!-- Bootstrap JavaScript   -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

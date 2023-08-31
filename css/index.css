@@ -1,0 +1,268 @@
+/* apply style to all */
+* {
+    font-family: "Nunito", sans-serif;
+  }
+  
+  /* styling the body */
+  body {
+    background-color: aqua !important;
+  }
+  
+  /* main heading */
+  .mainHead {
+    font-weight: bold !important;
+    color: white !important;
+  }
+  
+  /* logo */
+  .logo {
+    background: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 3px white;
+    margin-right: 10px;
+  }
+  
+  /* favorite button */
+  .favBtn {
+    border-radius: 40px !important;
+    background: rgb(223 229 243) !important;
+    color: black;
+  }
+  .favBtn a {
+    color: black;
+    font-weight: bold !important;
+  }
+  .favBtn:hover a {
+    color: rgb(97, 97, 97) !important;
+    font-weight: 1000 !important;
+  }
+  .favBtn:hover {
+    transform: scaleX(1.1);
+    background-color: rgb(195, 213, 254) !important;
+  }
+  
+  /* designing background of headings of page */
+  .search-section,
+  .fav-section,
+  .about-sec {
+    background: linear-gradient(0deg, transparent, rgb(33, 37, 41));
+  }
+  
+  /* designing search bar */
+  .search-container {
+    width: 500px !important;
+    padding: 50px;
+  }
+  .inp {
+    border-radius: 40px !important;
+  }
+  .inp:hover {
+    background-color: rgb(209, 209, 209) !important;
+  }
+  
+  /* designing search for heading */
+  .result-section h2 {
+    text-align: center;
+    padding: 20px 0px;
+  }
+  
+  /* designing the profile image container */
+  #thumb {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .cardThumb {
+    width: 100%;
+  }
+  .cardThumb img {
+    height: 200px;
+    max-width: 100%;
+    width: auto;
+    margin: auto;
+  }
+  .aboutThumb {
+    width: 60%;
+  }
+  .aboutThumb img {
+    max-height: 300px;
+    max-width: 500px;
+    width: auto;
+    margin: auto;
+  }
+  .aboutThumb img:hover {
+    transform: scale(1.5);
+    animation: fadein 1s;
+  }
+  #fav-thumb {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  #fav-thumb img {
+    height: 200px;
+    max-width: 100%;
+    width: auto;
+    margin: auto;
+  }
+  
+  /* designing the button */
+  .btn {
+    border-radius: 30px !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    margin: auto;
+  }
+  .btn:hover {
+    transform: scaleX(1.1);
+    /* background-color: rgb(195, 213, 254) !important; */
+  }
+  
+  /* designing the nofification section */
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.4s, fadeout 0.4s 1.2s;
+    animation: fadein 0.4s, fadeout 0.4s 1.2s;
+  }
+  
+  /* about Section */
+  .aboutInfo {
+    color: white !important;
+    /* background-color: #00ff26 !important; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  
+  /* designing the text details container */
+  .textDetails {
+    width: 40%;
+    font-size: 1.2rem;
+    /* background-color: pink; */
+  }
+  
+  /* return back button design */
+  .btm{
+    width: 100%;
+  }
+  
+  /* usuful design classes */
+  .disp-none {
+    display: none;
+  }
+  .posn-sticky {
+    position: sticky !important;
+    top: 0;
+  }
+  
+  /* Favorite Section  */
+  #list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+  }
+  /* designing the details of hero conatiner */
+  #fav-info {
+    width: 300px;
+    background: linear-gradient(0deg, #eeeeee, #fa06f6);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* designing buttons on favorite page*/
+  #fav-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+  }
+  
+  /* animation keyframes */
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  
+  /* adding responsive  */
+  @media only screen and (max-width: 768px) {
+    .search-container {
+      width: 100% !important;
+      padding: 50px;
+    }
+  
+    div#superhero {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    
+    .textDetails {
+      width: 100%;
+      color: black;
+    }
+    .aboutThumb {
+      display: flex !important;
+      width: 100%;
+    }
+    .aboutThumb img {
+      margin: auto;
+    }
+  }
+  
